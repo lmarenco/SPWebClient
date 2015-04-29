@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0c3ea00f-8f18-4ac2-b3ac-183a44af189b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://ycmiva.yale.edu/api/SearchPatternsService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SearchPatternsService.wsdl" MetadataType="Wsdl" ID="31050d13-0398-40cb-bc0c-587d881dbe35" SourceId="1" SourceUrl="http://ycmiva.yale.edu/api/SearchPatternsService.svc?wsdl" />
+    <MetadataFile FileName="SearchPatternsService.xsd" MetadataType="Schema" ID="ff623e12-ec36-4cba-aba9-b13ffffcbb61" SourceId="1" SourceUrl="http://ycmiva.yale.edu/api/SearchPatternsService.svc?xsd=xsd2" />
+    <MetadataFile FileName="SearchPatternsService.disco" MetadataType="Disco" ID="c5fd9acd-d949-4196-b4a6-4e8c53a18da3" SourceId="1" SourceUrl="http://ycmiva.yale.edu/api/SearchPatternsService.svc?disco" />
+    <MetadataFile FileName="SearchPatternsService1.xsd" MetadataType="Schema" ID="1fb18a57-2eba-4c82-8ce2-4e93e3644c5d" SourceId="1" SourceUrl="http://ycmiva.yale.edu/api/SearchPatternsService.svc?xsd=xsd1" />
+    <MetadataFile FileName="SearchPatternsService2.xsd" MetadataType="Schema" ID="61427d84-9c2e-429d-89c2-64ba185a20be" SourceId="1" SourceUrl="http://ycmiva.yale.edu/api/SearchPatternsService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

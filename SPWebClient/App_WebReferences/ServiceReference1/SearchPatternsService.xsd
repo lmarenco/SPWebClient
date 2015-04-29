@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WebService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WebService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfSearchPattern">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SearchPattern" nillable="true" type="tns:SearchPattern" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSearchPattern" nillable="true" type="tns:ArrayOfSearchPattern" />
+  <xs:complexType name="SearchPattern">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SearchPattern" nillable="true" type="tns:SearchPattern" />
+  <xs:complexType name="ArrayOfTermList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TermList" nillable="true" type="tns:TermList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTermList" nillable="true" type="tns:ArrayOfTermList" />
+  <xs:complexType name="TermList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" type="xs:int" />
+      <xs:element minOccurs="0" name="TypeName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TermList" nillable="true" type="tns:TermList" />
+  <xs:complexType name="ArrayOfTerm">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Term" nillable="true" type="tns:Term" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTerm" nillable="true" type="tns:ArrayOfTerm" />
+  <xs:complexType name="Term">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Term" nillable="true" type="tns:Term" />
+  <xs:complexType name="ArrayOfKeyword">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Keyword" nillable="true" type="tns:Keyword" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfKeyword" nillable="true" type="tns:ArrayOfKeyword" />
+  <xs:complexType name="Keyword">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+      <xs:element minOccurs="0" name="KeywordType_Id" type="xs:int" />
+      <xs:element minOccurs="0" name="KeywordType_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TermList_Id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Keyword" nillable="true" type="tns:Keyword" />
+  <xs:complexType name="SearchPatternDetail">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SearchPattern">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="termLists" nillable="true" type="tns:ArrayOfTermListDetail" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SearchPatternDetail" nillable="true" type="tns:SearchPatternDetail" />
+  <xs:complexType name="ArrayOfTermListDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TermListDetail" nillable="true" type="tns:TermListDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTermListDetail" nillable="true" type="tns:ArrayOfTermListDetail" />
+  <xs:complexType name="TermListDetail">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:TermList">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="keywords" nillable="true" type="tns:ArrayOfKeyword" />
+          <xs:element minOccurs="0" name="terms" nillable="true" type="tns:ArrayOfTerm" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TermListDetail" nillable="true" type="tns:TermListDetail" />
+</xs:schema>

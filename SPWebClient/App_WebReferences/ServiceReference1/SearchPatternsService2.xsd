@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://ycmiva.yale.edu/api/SearchPatternsService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WebService" />
+  <xs:element name="List_SearchPatterns">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="List_SearchPatternsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WebService" minOccurs="0" name="List_SearchPatternsResult" nillable="true" type="q1:ArrayOfSearchPattern" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="List_SearchPattern_TermLists">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pattern_Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="List_SearchPattern_TermListsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WebService" minOccurs="0" name="List_SearchPattern_TermListsResult" nillable="true" type="q2:ArrayOfTermList" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="List_TermList_Terms">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TemList_Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="List_TermList_TermsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WebService" minOccurs="0" name="List_TermList_TermsResult" nillable="true" type="q3:ArrayOfTerm" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="List_TermList_Keywords">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TermList_Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="List_TermList_KeywordsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WebService" minOccurs="0" name="List_TermList_KeywordsResult" nillable="true" type="q4:ArrayOfKeyword" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Get_SearchPattern">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pattern_Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Get_SearchPatternResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WebService" minOccurs="0" name="Get_SearchPatternResult" nillable="true" type="q5:SearchPattern" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Get_TermList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TermList_Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Get_TermListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WebService" minOccurs="0" name="Get_TermListResult" nillable="true" type="q6:TermList" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Get_SearchPattern_Complete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Pattern_Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Get_SearchPattern_CompleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WebService" minOccurs="0" name="Get_SearchPattern_CompleteResult" nillable="true" type="q7:SearchPatternDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

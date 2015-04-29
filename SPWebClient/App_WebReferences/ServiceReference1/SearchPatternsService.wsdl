@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SearchPatternsService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://ycmiva.yale.edu/api/SearchPatternsService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://ycmiva.yale.edu/api/SearchPatternsService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://ycmiva.yale.edu/api/SearchPatternsService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WebService" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISearchPatternsService_List_SearchPatterns_InputMessage">
+    <wsdl:part name="parameters" element="tns:List_SearchPatterns" />
+  </wsdl:message>
+  <wsdl:message name="ISearchPatternsService_List_SearchPatterns_OutputMessage">
+    <wsdl:part name="parameters" element="tns:List_SearchPatternsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISearchPatternsService_List_SearchPattern_TermLists_InputMessage">
+    <wsdl:part name="parameters" element="tns:List_SearchPattern_TermLists" />
+  </wsdl:message>
+  <wsdl:message name="ISearchPatternsService_List_SearchPattern_TermLists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:List_SearchPattern_TermListsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISearchPatternsService_List_TermList_Terms_InputMessage">
+    <wsdl:part name="parameters" element="tns:List_TermList_Terms" />
+  </wsdl:message>
+  <wsdl:message name="ISearchPatternsService_List_TermList_Terms_OutputMessage">
+    <wsdl:part name="parameters" element="tns:List_TermList_TermsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISearchPatternsService_List_TermList_Keywords_InputMessage">
+    <wsdl:part name="parameters" element="tns:List_TermList_Keywords" />
+  </wsdl:message>
+  <wsdl:message name="ISearchPatternsService_List_TermList_Keywords_OutputMessage">
+    <wsdl:part name="parameters" element="tns:List_TermList_KeywordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISearchPatternsService_Get_SearchPattern_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_SearchPattern" />
+  </wsdl:message>
+  <wsdl:message name="ISearchPatternsService_Get_SearchPattern_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_SearchPatternResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISearchPatternsService_Get_TermList_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_TermList" />
+  </wsdl:message>
+  <wsdl:message name="ISearchPatternsService_Get_TermList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_TermListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISearchPatternsService_Get_SearchPattern_Complete_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_SearchPattern_Complete" />
+  </wsdl:message>
+  <wsdl:message name="ISearchPatternsService_Get_SearchPattern_Complete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_SearchPattern_CompleteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISearchPatternsService">
+    <wsdl:operation name="List_SearchPatterns">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISearchPatternsService/List_SearchPatterns" message="tns:ISearchPatternsService_List_SearchPatterns_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISearchPatternsService/List_SearchPatternsResponse" message="tns:ISearchPatternsService_List_SearchPatterns_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="List_SearchPattern_TermLists">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISearchPatternsService/List_SearchPattern_TermLists" message="tns:ISearchPatternsService_List_SearchPattern_TermLists_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISearchPatternsService/List_SearchPattern_TermListsResponse" message="tns:ISearchPatternsService_List_SearchPattern_TermLists_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="List_TermList_Terms">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISearchPatternsService/List_TermList_Terms" message="tns:ISearchPatternsService_List_TermList_Terms_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISearchPatternsService/List_TermList_TermsResponse" message="tns:ISearchPatternsService_List_TermList_Terms_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="List_TermList_Keywords">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISearchPatternsService/List_TermList_Keywords" message="tns:ISearchPatternsService_List_TermList_Keywords_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISearchPatternsService/List_TermList_KeywordsResponse" message="tns:ISearchPatternsService_List_TermList_Keywords_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_SearchPattern">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISearchPatternsService/Get_SearchPattern" message="tns:ISearchPatternsService_Get_SearchPattern_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISearchPatternsService/Get_SearchPatternResponse" message="tns:ISearchPatternsService_Get_SearchPattern_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_TermList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISearchPatternsService/Get_TermList" message="tns:ISearchPatternsService_Get_TermList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISearchPatternsService/Get_TermListResponse" message="tns:ISearchPatternsService_Get_TermList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_SearchPattern_Complete">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISearchPatternsService/Get_SearchPattern_Complete" message="tns:ISearchPatternsService_Get_SearchPattern_Complete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISearchPatternsService/Get_SearchPattern_CompleteResponse" message="tns:ISearchPatternsService_Get_SearchPattern_Complete_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISearchPatternsService" type="tns:ISearchPatternsService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="List_SearchPatterns">
+      <soap:operation soapAction="http://tempuri.org/ISearchPatternsService/List_SearchPatterns" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="List_SearchPattern_TermLists">
+      <soap:operation soapAction="http://tempuri.org/ISearchPatternsService/List_SearchPattern_TermLists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="List_TermList_Terms">
+      <soap:operation soapAction="http://tempuri.org/ISearchPatternsService/List_TermList_Terms" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="List_TermList_Keywords">
+      <soap:operation soapAction="http://tempuri.org/ISearchPatternsService/List_TermList_Keywords" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_SearchPattern">
+      <soap:operation soapAction="http://tempuri.org/ISearchPatternsService/Get_SearchPattern" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_TermList">
+      <soap:operation soapAction="http://tempuri.org/ISearchPatternsService/Get_TermList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_SearchPattern_Complete">
+      <soap:operation soapAction="http://tempuri.org/ISearchPatternsService/Get_SearchPattern_Complete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SearchPatternsService">
+    <wsdl:port name="BasicHttpBinding_ISearchPatternsService" binding="tns:BasicHttpBinding_ISearchPatternsService">
+      <soap:address location="http://ycmiva.yale.edu/api/SearchPatternsService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

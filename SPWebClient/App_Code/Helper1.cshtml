@@ -1,0 +1,92 @@
+﻿@helper TermsListTable(ServiceReference1.SearchPatternDetail spd)
+{
+
+	<table style="background-color:#ecfcc4">
+		<tr>
+			<td>Id:</td>
+			<td>@spd.Id</td>
+		</tr>
+		<tr>
+			<td>Name:</td>
+			<td>@spd.Name</td>
+		</tr>
+		<tr>
+			<td>Version:</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Version Date:</td>
+			<td></td>
+		</tr>
+
+	</table>
+	ServiceReference1.TermListDetail[] tlsd = spd.termLists;
+	<table>
+		@foreach (var tld in tlsd)
+		{
+			<tr>
+				<th colspan="3">TermList</th>
+			</tr>
+
+			<tr style="background-color:#fce9e5">
+				<th>Id</th>
+				<th>Type</th>
+				<th>Name</th>
+				<th>Description</th>
+			</tr>
+			<tr style="background-color:#facac0">
+				<td style="text-align:right">@tld.Id</td>
+				<td>@tld.Type</td>
+				<td>@tld.Name</td>
+				<td>@tld.Description</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td colspan="3">
+					@{
+			var terms = tld.terms;
+			var keywords = tld.keywords;
+					}
+					<table>
+						<tr>
+							<td style="vertical-align:top">
+								<div style="font-size:larger; font-weight:600">Terms</div>
+								<table style="background-color:#e3f1fe">
+									<tr style="background-color:#f2f8fc">
+										<th style="text-align:right">Id</th>
+										<th>Name</th>
+									</tr>
+									@foreach (var term in terms)
+									{
+										<tr>
+											<td style="text-align:right">@term.Id</td>
+											<td>@term.Name</td>
+										</tr>
+									}
+								</table>
+							</td>
+							<td style="vertical-align:top">
+								<div style="font-size:larger; font-weight:600">Keywords</div>
+								<table style="background-color:#fcf6d5">
+									<tr style="background-color:#fefcf1">
+										<th style="text-align:right">Id</th>
+										<th>Type</th>
+										<th>Name</th>
+									</tr>
+									@foreach (var keyword in keywords)
+									{
+										<tr>
+											<td style="text-align:right">@keyword.Id</td>
+											<td>@keyword.KeywordType_Name</td>
+											<td>@keyword.Name</td>
+										</tr>
+									}
+								</table>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		}
+	</table>
+}
